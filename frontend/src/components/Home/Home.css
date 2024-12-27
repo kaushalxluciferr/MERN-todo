@@ -1,0 +1,33 @@
+.home{
+   width: 100%;
+   height: 89.8vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #022c22 !important;
+
+   .txt1{
+    color: #a7f3d0;
+   }
+
+}
+.container{
+    margin-top: 100px;
+}
+
+p{
+    color: #9333ea !important;
+}
+.btn-todo{
+    border: none;
+    padding: 4px 5px;
+    border-radius: 8px;
+    background-color: tomato;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-top: 10px;
+
+
+}
+
