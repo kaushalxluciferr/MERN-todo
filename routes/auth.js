@@ -1,7 +1,8 @@
 const router=require('express').Router()
 
 const User=require('../model/user')
-const bcrypt=require('bcrypt')
+const bcrypt = require('bcryptjs');
+
 // for sighninn purpose
 
 router.post("/register",async(req,res)=>{
