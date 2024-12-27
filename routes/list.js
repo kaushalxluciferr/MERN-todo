@@ -56,6 +56,8 @@ router.put('/update/:id', async (req, res) => {
   });
   
 router.delete('/delete/:id',async(req,res)=>{
+    try{
+        
 const {id}=req.body;
 const exuser=await User.findByIdAndUpdate(id,{$pull:{list:req.params.id}})
 
@@ -66,6 +68,14 @@ if(exuser)
         message:"deleted sucessfully"
     }))
 }
+    }catch(error)
+    {
+        res.status(500).json({
+            success: false,
+            message: "An error occurred while deleting",
+            error: error.message
+        });
+    }
 })
 
 router.get("/gettask/:id",async (req,res)=>{
