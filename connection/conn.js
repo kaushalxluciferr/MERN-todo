@@ -2,7 +2,7 @@ const mongoose=require('mongoose')
 
 const conn=async (req,res)=>{
     try{
-await mongoose.connect('mongodb+srv://user:user123@todocluster.r5znv.mongodb.net/mydatabase').then(()=>{
+await mongoose.connect(process.env.LINK).then(()=>{
     console.log("connect sucessfully");
     
 })
